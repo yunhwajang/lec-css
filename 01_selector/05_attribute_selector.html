@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+
+    <style>
+
+    input[type=text]
+    {
+        background-color: antiquewhite;
+    }
+
+    input[type=password]:focus
+    {
+        background-color:burlywood;
+    }
+
+    button[type=submit]
+    {
+        width:100px;
+        height: 50px;
+        border:2px dashed red;
+        background-color: tomato;
+        color:white;
+        font-size:1.5em;
+        border-radius: 8px;
+        font-weight: 700;
+
+    }
+
+    button[type]:hover
+    {
+        background-color: blueviolet;
+    }
+
+    button[class=btn-primary]
+    {
+        background-color:blue;
+    }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>태그가 가지고 있는 속성을 선택하는 문법</h1>
+    <form>
+       <div>
+          
+        <label for="uid">user id</label>
+        <input type="text" id="uid" class="login" placeholder="8자이상" required>
+
+       </div>
+
+       <div>
+          
+        <label for="pwd">user id</label>
+        <input type="password" id="pwd" class="login" placehold="8자이상" required>
+
+       </div>
+
+       <div>
+          
+        <label for="pin">user id</label>
+        <input type="password" id="pin" class="login" placehold="숫자만">
+
+       </div>
+
+
+         <button type="submit" class="btn">로그인</button>
+         <button type="button" class="btn-primary">일반버튼</button>
+         <button type="reset" class="btn">취소버튼</button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title_item, .desc_item {
+        margin-top: 10px;
+         }
+
+        .desc_item {
+            font-size: 0.75em;
+        }
+        .boxwrap {
+            display: table;
+            background-color: steelblue;
+            /* 완벽하게 분할 가능 */
+            /* table-layout: fixed; */
+        }
+        .boxwrap .box {
+            border: 1px solid white;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            padding: 10px;
+        }
+        .thumb img {
+            width: 40%;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>
+        display: flex와 비슷하고 layout에 적극적으로 활용되고 있음
+    </h1>
+    <div class="boxwrap">
+        <div class="box">
+            <span>
+
+            </span>
+        </div>
+    </div>
+</body>
+</html>

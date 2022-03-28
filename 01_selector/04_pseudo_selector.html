@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의사 선택자</title>
+
+    <style>
+        a
+        {
+            color:black;
+            background-color: bisque;
+        }
+        a:hover /*  a태그에 마우스가 올라가면 */
+        {
+            
+            background-color: aqua;
+        }
+        a:link  /* a태그에 링크가 걸려있으면 */
+        {
+            font-size:1.5em;
+        }
+        a:active /* 클릭을 하면 */
+        {
+            color:tomato;
+        }
+        a:visited /* a태그에 방문한 적이 있으면, a에 백그라운드컬러가 기본적으로 있어야 적용 가능 */
+        {
+            /* background-color: blueviolet; */     /* 이해안됨 */
+        }
+
+        ul li:first-child     /* li를 지목한거지 li가 가지고 있는 a태그까지 지목되는 것이 아니다. */
+        {
+            color:darkolivegreen;
+        }
+
+        ul li:first-child > a
+        {
+            color:darkgoldenrod;
+        }
+
+        ol li:nth-child(odd) /* odd,2n+1은 홀수번째 even,2n은 짝수번째 2라고 하면 2번째만 지정됨 */
+        {   
+            color:red;
+        }
+
+       ol li::after
+        {
+            content: "번째";
+        }
+       ol li::before
+        {
+            content: "이건 ";
+        }
+
+        li a::after
+        {
+            content:"로 이동하기"
+        }
+            
+    </style>
+</head>
+<body>
+    <h1>대상 노드에 이벤트나 효과를 적용하게 된다는 가정하에 만들어지는 선택자</h1>
+    <ul>
+        <li class="links">
+            <a href="https://www.naver.com">네이버</a>
+            안녕하세용  <!-- 얘는 li의 소속이니까 얘도 영항을 미침 but a태그까지 영향x -->
+        </li>
+
+        <li class="links">
+            <a href="https://www.daum.net">다음</a>
+        </li>
+
+        <li class="links">
+            <a href="https://www.google.com">구글</a>
+        </li>
+
+        <li class="links">
+            <a href="https://www.nate.com">네이트</a>
+        </li>
+
+       
+    </ul>
+
+    <ol>
+
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+
+
+    </ol>
+</body>
+</html>
